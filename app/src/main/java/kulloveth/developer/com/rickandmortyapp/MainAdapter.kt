@@ -6,19 +6,26 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import kotlinx.android.synthetic.main.rv_item.view.*
 
-class MainAdapter: RecyclerView.Adapter<MainAdapter.ViewHolder>() {
-    private var characterDataList:List<CharacterData> = ArrayList()
+class MainAdapter : RecyclerView.Adapter<MainAdapter.ViewHolder>() {
+    private var characterDataList: List<Result> = ArrayList()
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        val view:View = LayoutInflater.from(parent.context).inflate(R.layout.activity_main,parent,false)
+        val view: View =
+            LayoutInflater.from(parent.context).inflate(R.layout.rv_item, parent, false)
         return ViewHolder(view)
+    }
+
+    fun setupData(characterDataList: List<Result>) {
+        this.characterDataList = characterDataList
     }
 
     override fun getItemCount(): Int = characterDataList.size
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        var data : CharacterData= characterDataList[position]
-        holder.itemView.name.text = data.characterName
+        val data: Result = characterDataList[position]
+        holder.itemView.name.text = data.name
     }
 
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view)
 }
+
+
