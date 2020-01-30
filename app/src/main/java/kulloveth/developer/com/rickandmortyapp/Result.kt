@@ -7,7 +7,7 @@ import java.io.Serializable
 data class Result(
 
     @SerializedName("name")
-    val name:String,
+    val name: String,
     @SerializedName("status")
-    val status:String
-):Serializable
+    val status: String
+) : Serializable

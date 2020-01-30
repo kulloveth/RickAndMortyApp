@@ -13,7 +13,7 @@ interface RetrofitService {
 
     companion object {
         fun getRetrofitInstance(): RetrofitService {
-            val retrofit:Retrofit= Retrofit.Builder()
+            val retrofit: Retrofit = Retrofit.Builder()
                 .baseUrl("https://rickandmortyapi.com/")
                 .addConverterFactory(GsonConverterFactory.create())
                 .build()
