@@ -7,5 +7,5 @@ import retrofit2.http.GET
 
 interface ApiInterface {
     @GET("api/character/")
-    fun fetchCharacterName(): Call<List<Character>>
+    fun fetchCharacterName(): Call<List<CharacterData>>
 }
