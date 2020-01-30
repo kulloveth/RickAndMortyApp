@@ -7,7 +7,7 @@ import androidx.recyclerview.widget.RecyclerView
 import kotlinx.android.synthetic.main.rv_item.view.*
 
 class MainAdapter : RecyclerView.Adapter<MainAdapter.ViewHolder>() {
-    private var characterDataList: List<Result> = ArrayList()
+    private var resultList: List<Result> = ArrayList()
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val view: View =
             LayoutInflater.from(parent.context).inflate(R.layout.rv_item, parent, false)
@@ -15,13 +15,13 @@ class MainAdapter : RecyclerView.Adapter<MainAdapter.ViewHolder>() {
     }
 
     fun setupData(characterDataList: List<Result>) {
-        this.characterDataList = characterDataList
+        this.resultList = characterDataList
     }
 
-    override fun getItemCount(): Int = characterDataList.size
+    override fun getItemCount(): Int = resultList.size
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        val data: Result = characterDataList[position]
+        val data: Result = resultList[position]
         holder.itemView.name.text = data.name
     }
 
