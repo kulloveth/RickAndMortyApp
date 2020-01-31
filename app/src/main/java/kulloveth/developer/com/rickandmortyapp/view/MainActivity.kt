@@ -1,10 +1,14 @@
-package kulloveth.developer.com.rickandmortyapp
+package kulloveth.developer.com.rickandmortyapp.view
 
 import android.os.Bundle
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import kotlinx.android.synthetic.main.activity_main.*
+import kulloveth.developer.com.rickandmortyapp.MainAdapter
+import kulloveth.developer.com.rickandmortyapp.R
+import kulloveth.developer.com.rickandmortyapp.api.RetrofitService
+import kulloveth.developer.com.rickandmortyapp.models.CharacterData
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response

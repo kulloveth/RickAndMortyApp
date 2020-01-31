@@ -1,4 +1,4 @@
-package kulloveth.developer.com.rickandmortyapp
+package kulloveth.developer.com.rickandmortyapp.models
 
 import com.google.gson.annotations.SerializedName
 import java.io.Serializable

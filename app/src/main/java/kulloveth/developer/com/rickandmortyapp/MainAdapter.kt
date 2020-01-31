@@ -5,6 +5,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import kotlinx.android.synthetic.main.rv_item.view.*
+import kulloveth.developer.com.rickandmortyapp.models.Result
 
 class MainAdapter : RecyclerView.Adapter<MainAdapter.ViewHolder>() {
     private var resultList: List<Result> = ArrayList()

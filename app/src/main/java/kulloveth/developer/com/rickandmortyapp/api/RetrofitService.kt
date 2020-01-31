@@ -1,5 +1,6 @@
-package kulloveth.developer.com.rickandmortyapp
+package kulloveth.developer.com.rickandmortyapp.api
 
+import kulloveth.developer.com.rickandmortyapp.models.CharacterData
 import retrofit2.Call
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
