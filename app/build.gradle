@@ -3,6 +3,7 @@ apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 
 apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
 
 android {
     compileSdkVersion 29
@@ -29,6 +30,10 @@ android {
 }
 
 dependencies {
+    def lifecycle_version = "2.1.0"
+
+    implementation "androidx.lifecycle:lifecycle-extensions:$lifecycle_version"
+   kapt "androidx.lifecycle:lifecycle-compiler:$lifecycle_version"
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     implementation 'androidx.appcompat:appcompat:1.1.0'
