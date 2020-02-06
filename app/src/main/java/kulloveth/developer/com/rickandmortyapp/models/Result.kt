@@ -9,5 +9,7 @@ data class Result(
     @SerializedName("name")
     val name: String,
     @SerializedName("status")
-    val status: String
+    val status: String,
+    @SerializedName("image")
+    val photoUrl:String
 ) : Serializable

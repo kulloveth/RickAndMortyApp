@@ -10,8 +10,6 @@ import io.reactivex.disposables.Disposable
 import io.reactivex.schedulers.Schedulers
 import kulloveth.developer.com.rickandmortyapp.api.RetrofitService
 import kulloveth.developer.com.rickandmortyapp.models.CharacterData
-import retrofit2.Call
-import retrofit2.Callback
 import retrofit2.Response
 
 class MainActivityViewModel : ViewModel() {
@@ -31,7 +29,7 @@ class MainActivityViewModel : ViewModel() {
         val apiInterface = RetrofitService.getRetrofitInstance().fetchCharacterName()
         apiInterface.subscribeOn(Schedulers.io())
             .observeOn(AndroidSchedulers.mainThread())
-            .subscribe(object : SingleObserver<Response<CharacterData>>{
+            .subscribe(object : SingleObserver<Response<CharacterData>> {
                 override fun onSuccess(t: Response<CharacterData>) {
                     characters.value = t.body()
                     Log.d("character", "" + t.body())

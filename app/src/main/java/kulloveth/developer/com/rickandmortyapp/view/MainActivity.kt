@@ -4,6 +4,7 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
+import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import kotlinx.android.synthetic.main.activity_main.*
 import kulloveth.developer.com.rickandmortyapp.MainAdapter
@@ -22,7 +23,7 @@ class MainActivity : AppCompatActivity() {
 
         val adapter = MainAdapter()
         recyclerView.adapter = adapter
-        recyclerView.layoutManager = LinearLayoutManager(this)
+        recyclerView.layoutManager = GridLayoutManager(this,2)
         viewModel.getCharacters().observe(this, Observer {
             adapter.setupData(it.results)
             adapter.notifyDataSetChanged()
