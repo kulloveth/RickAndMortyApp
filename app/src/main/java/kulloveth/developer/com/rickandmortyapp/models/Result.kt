@@ -11,5 +11,9 @@ data class Result(
     @SerializedName("status")
     val status: String,
     @SerializedName("image")
-    val photoUrl:String
+    val photoUrl: String,
+
+    val id: Int,
+    val species: String,
+    val gender: String
 ) : Serializable
