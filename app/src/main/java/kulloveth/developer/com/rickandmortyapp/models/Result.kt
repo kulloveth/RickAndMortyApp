@@ -15,5 +15,7 @@ data class Result(
 
     val id: Int,
     val species: String,
-    val gender: String
+    val gender: String,
+    @SerializedName("origin")
+    val origin: Origin
 ) : Serializable

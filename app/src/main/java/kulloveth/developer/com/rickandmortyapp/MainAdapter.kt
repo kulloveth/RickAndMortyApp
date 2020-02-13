@@ -20,6 +20,8 @@ class MainAdapter(val listener: OnItemClickedListener) :
         val CHARACTER_STATUS = "characterStatus"
         val CHARACTER_SPECIE= "characterSpecie"
         val CHARACTER_GENDER = "characterGender"
+        val CHARACTER_ORIGIN_NAME = "characterOriginName"
+        val CHARACTER_ORIGIN_URL = "characterOriginUrl"
     }
 
     private var resultList: List<Result> = ArrayList()

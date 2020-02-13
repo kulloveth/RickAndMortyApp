@@ -33,6 +33,8 @@ class MainActivity : AppCompatActivity() {
                 intent.putExtra(MainAdapter.CHARACTER_STATUS, result.status)
                 intent.putExtra(MainAdapter.CHARACTER_SPECIE, result.species)
                 intent.putExtra(MainAdapter.CHARACTER_GENDER, result.gender)
+             intent.putExtra(MainAdapter.CHARACTER_ORIGIN_NAME,result.origin.name)
+                intent.putExtra(MainAdapter.CHARACTER_ORIGIN_URL,result.origin.url)
                 startActivity(intent)
 
             }
